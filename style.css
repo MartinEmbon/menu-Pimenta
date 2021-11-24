@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.accordion {
+    width: 800px;
+}
+
+.accordion .contentBx{
+    position:relative;
+    margin: 5px 20px;    
+    border-top:1px solid gray;
+    width: 45%;    
+}
+
+.accordion .contentBx:last-child{    
+    border-bottom:1px solid grey;
+}
+
+.accordion .contentBx .label {
+    position:relative;
+    padding: 10px;
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+    color: black;
+    font-size: 11px;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.accordion .contentBx .label::before{
+    content:"+";
+    position:absolute;
+    top:50%;
+    right:20px;
+    transform:translateY(-50%);    
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.accordion .contentBx.active .label::before{
+    content:"-";
+}
+
+.accordion .contentBx .content {
+    position:relative;    
+    background-color: transparent;
+    height: 0;
+    font-size: 11px;
+    font-family: Helvetica, sans-serif;
+    overflow:hidden;
+    transition: 0.5s;
+    padding-left: 10px;
+    width: 90%;
+}
+
+.accordion .contentBx.active:nth-child(3) .content {    
+    height:7rem;
+    padding-left: 10px;
+}
+.accordion .contentBx.active .content {    
+    height:4rem;
+    padding-left: 10px;
+}
+
+@media screen and (max-width:600px){
+    .accordion .contentBx.active .content {    
+        height: 7rem;
+    }
+    .accordion .contentBx.active:nth-child(3) .content {    
+        height:10rem;     
+    }   
+}
+
+@media screen and (max-width:360px){    
+    .accordion .contentBx.active:nth-child(3) .content {    
+        height:13rem;
+     
+    }   
+}
