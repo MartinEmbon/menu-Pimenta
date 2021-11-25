@@ -44,7 +44,7 @@ body {
     content: "+";
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 10px;
     transform: translateY(-50%);
     font-size: 14px;
     font-weight: 400;
@@ -86,30 +86,13 @@ section .titulos p {
     overflow: hidden;
     transition: 0.5s;
     padding-left: 10px;
-    width: 100%;
+    width: 95%;
     margin-top: 0;
 }
 
 .accordion .contentBx.active .content {
     height: 36rem;
+    overflow: visible;
     padding-left: 10px;
 }
 
-
-@media screen and (max-width:400px) {
-    .accordion .contentBx.active .content {
-        height: 670px;
-    }
-}
-
-@media screen and (max-width:350px) {
-    .accordion .contentBx.active .content {
-        height: 700px;
-    }
-}
-
-@media screen and (max-width:300px) {
-    .accordion .contentBx.active .content {
-        height: 800px;
-    }
-}
